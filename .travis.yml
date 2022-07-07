@@ -15,5 +15,7 @@ script:
   - npm start:dev
 deploy:
   provider: heroku
+  via_cleanup: true 
+  keep-history: true 
   api_key: SHZCJvOv7NdMZnuw00Ae0Q
   app: travis-ci-codegym
