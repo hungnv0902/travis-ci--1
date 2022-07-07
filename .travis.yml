@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 14
+script:
+  - echo '*** Starting build ***'
+  - echo 'Running test'
+  - npm test
+  - echo 'Start'
+  - npm start:dev
+deploy:
+  provider: heroku
+  api_key: 1297b322-2e3e-4f4b-88d0-8a4e863541a3
+  app: travis-ci-codegym
