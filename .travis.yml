@@ -1,6 +1,12 @@
 language: node_js
 node_js:
-  - 14
+  - "14"
+sudo: false
+ 
+branches:
+  only:
+  - main
+
 script:
   - echo '*** Starting build ***'
   - echo 'Running test'
