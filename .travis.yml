@@ -14,8 +14,6 @@ script:
   - echo 'Start'
   - npm start:dev
 deploy:
-  provider: heroku
-  via_cleanup: true 
-  keep-history: true 
-  api_key: 1297b322-2e3e-4f4b-88d0-8a4e863541a3
-  app: travis-ci-codegym
+  provider: heroku 
+  api_key: $heroku_key
+  app: your-heroku-app-name
