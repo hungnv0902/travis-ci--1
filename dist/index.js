@@ -5,12 +5,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
-const router_1 = __importDefault(require("./src/router/router"));
 const PORT = 3000;
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
-app.use(router_1.default);
+app.get('/', (req, res) => {
+    res.status(200).send("Hello World!");
+});
 app.listen(PORT, () => {
     console.log("App running on port: " + PORT);
 });
+exports.default = app;
 //# sourceMappingURL=index.js.map
